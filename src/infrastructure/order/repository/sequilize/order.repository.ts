@@ -69,7 +69,7 @@ export default class OrderRepository implements OrderRepositoryInterface {
       orderModel.id,
       orderModel.customer_id,
       orderModel.items.map((item) => {
-        return new OrderItem(item.id, item.product_id, item.name, item.price / item.quantity, item.quantity)
+        return new OrderItem(item.id, item.name, item.price / item.quantity, item.product_id, item.quantity)
       }),
     );
 
@@ -85,7 +85,7 @@ export default class OrderRepository implements OrderRepositoryInterface {
           orderModel.id,
           orderModel.customer_id,
           orderModel.items.map((item) => {
-            return new OrderItem(item.id, item.product_id, item.name, item.price / item.quantity, item.quantity)
+            return new OrderItem(item.id, item.name, item.price / item.quantity, item.product_id, item.quantity)
           }),
         ),
     );
